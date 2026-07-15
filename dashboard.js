@@ -211,6 +211,9 @@ async function loadWorkflowHistory() {
         </div>
       `;
       historyList.appendChild(li);
+      
+      // Fetch details and console logs for the run
+      fetchScraperLogStatus(run.id, run.run_number, li);
     });
 
   } catch (error) {
@@ -490,3 +493,93 @@ saveStateBtn.addEventListener('click', async () => {
     saveStateBtn.innerText = 'Save & Commit Ledger';
   }
 });
+
+// Fetch actions logs to check if SPPU page loaded successfully
+async function fetchScraperLogStatus(runId, runNumber, liElement) {
+  const badgeId = `page-status-${runId}`;
+  const logButtonId = `log-btn-${runId}`;
+  const logPreId = `log-pre-${runId}`;
+  
+  const statusContainer = document.createElement('div');
+  statusContainer.className = 'history-page-status';
+  statusContainer.innerHTML = `
+    <span class="page-load-badge loading" id="${badgeId}">Checking page...</span>
+    <button class="btn secondary" id="${logButtonId}" style="padding: 0.15rem 0.4rem; font-size: 0.7rem; margin-left: auto; display: none;">View Logs</button>
+  `;
+  liElement.appendChild(statusContainer);
+  
+  const pre = document.createElement('pre');
+  pre.id = logPreId;
+  pre.className = 'run-log-preview';
+  pre.style.display = 'none';
+  liElement.appendChild(pre);
+
+  try {
+    const jobsRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/actions/runs/${runId}/jobs`, {
+      headers: getHeaders()
+    });
+    if (!jobsRes.ok) throw new Error();
+    const jobsData = await jobsRes.json();
+    if (!jobsData.jobs || jobsData.jobs.length === 0) throw new Error();
+    
+    const job = jobsData.jobs[0];
+    
+    if (job.status !== 'completed') {
+      const badge = document.getElementById(badgeId);
+      if (badge) {
+        badge.className = 'page-load-badge warning';
+        badge.innerText = 'Scraper Running...';
+      }
+      return;
+    }
+    
+    const logsRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/actions/jobs/${job.id}/logs`, {
+      headers: getHeaders()
+    });
+    if (!logsRes.ok) throw new Error();
+    const logText = await logsRes.text();
+    
+    const badge = document.getElementById(badgeId);
+    const viewBtn = document.getElementById(logButtonId);
+    
+    if (badge) {
+      if (logText.includes('[Scraper] Error fetching dashboard')) {
+        badge.className = 'page-load-badge failed';
+        badge.innerText = '⚠️ Page Load Failed';
+      } else if (logText.includes('Navigating to') && (logText.includes('No new results') || logText.includes('MATCH') || logText.includes('state.json updated'))) {
+        badge.className = 'page-load-badge success';
+        badge.innerText = '✔ Page Loaded';
+      } else {
+        badge.className = 'page-load-badge muted';
+        badge.innerText = 'Logs Empty';
+      }
+    }
+    
+    if (viewBtn) {
+      viewBtn.style.display = 'inline-block';
+      viewBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isCollapsed = pre.style.display === 'none';
+        pre.style.display = isCollapsed ? 'block' : 'none';
+        viewBtn.innerText = isCollapsed ? 'Hide Logs' : 'View Logs';
+        
+        if (isCollapsed) {
+          const relevantLines = logText
+            .split('\n')
+            .filter(line => line.includes('Navigating to') || line.includes('[Scraper]') || line.includes('[MATCH]') || line.includes('No new results') || line.includes('state.json updated') || line.includes('Error: Page load failed') || line.includes('[Telegram]') || line.includes('start') || line.includes('node dist/watcher.js'))
+            .map(line => line.replace(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z\s*/, ''))
+            .join('\n');
+          
+          pre.textContent = relevantLines || 'No scraper console logs found.';
+        }
+      });
+    }
+
+  } catch (error) {
+    const badge = document.getElementById(badgeId);
+    if (badge) {
+      badge.className = 'page-load-badge muted';
+      badge.innerText = 'Logs Unavailable';
+    }
+  }
+}

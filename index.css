@@ -676,3 +676,64 @@ input:focus, textarea:focus {
     padding: 1rem;
   }
 }
+
+/* Page status badges & Log previews in history */
+.history-page-status {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border-color);
+  gap: 0.5rem;
+}
+
+.page-load-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.page-load-badge.loading {
+  background-color: rgba(63, 63, 70, 0.1);
+  color: var(--text-secondary);
+}
+
+.page-load-badge.success {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.page-load-badge.failed {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.page-load-badge.warning {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.page-load-badge.muted {
+  background-color: rgba(113, 113, 122, 0.1);
+  color: var(--text-muted);
+}
+
+.run-log-preview {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(9, 9, 11, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #a7f3d0; /* emerald-200 */
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 150px;
+  overflow-y: auto;
+}
