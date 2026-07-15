@@ -58,9 +58,19 @@ To create and link Telegram channels to the bot:
 
 ---
 
-### 4. Enable GitHub Actions / Rotate Tokens
+### 4. Enable GitHub Actions / Setup Consistent Cron
 * **First Run**: Under your repo's **Actions** tab, find "Check SPPU Result" and click **Run workflow** to verify everything runs properly.
-* **Inactivity Pause**: GitHub automatically pauses schedules if the repository has no commits for 60 days. If it pauses, simply visit the repository's Actions tab and click "Enable workflows", or make a push/commit to re-enable it.
+* **Consistent Scheduling (Recommended)**: GitHub's built-in scheduler (`on.schedule`) is inconsistent and can be delayed by 30+ minutes. For highly consistent runs (exactly every 10 minutes), set up a free account on **[cron-job.org](https://cron-job.org)**:
+  1. Create a **GitHub Personal Access Token (Classic)** under Settings -> Developer Settings -> Personal Access Tokens. Give it the `repo` and `actions: write` scopes.
+  2. Create a new cron job on cron-job.org:
+     * **URL**: `https://api.github.com/repos/RUSHI-09/sppu_result_watcher/actions/workflows/check_result.yml/dispatches`
+     * **Method**: `POST`
+     * **Schedule**: Every 10 minutes
+     * **Request Body (Raw JSON)**: `{"ref": "main"}`
+     * **Headers**:
+       * `Authorization`: `Bearer YOUR_GITHUB_PAT`
+       * `Accept`: `application/vnd.github.v3+json`
+       * `User-Agent`: `cron-job-org`
 * **Rotate Tokens**: If your Telegram token is leaked or needs to be changed, simply update the `TELEGRAM_BOT_TOKEN` secret in GitHub. No changes to the code are required.
 
 ---
