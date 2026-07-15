@@ -1,0 +1,32 @@
+[
+  {
+    "id": "engineering",
+    "label": "Engineering",
+    "telegram_chat_id": "@sppu_engineering_results",
+    "match_any_of": ["B.E", "B.TECH", "ENGINEERING", "M.E", "M.TECH"]
+  },
+  {
+    "id": "science",
+    "label": "Science & Computer Applications",
+    "telegram_chat_id": "@sppu_science_results",
+    "match_any_of": ["B.SC", "M.SC", "SCIENCE", "B.C.A", "M.C.A", "B.C.S", "M.C.S"]
+  },
+  {
+    "id": "commerce",
+    "label": "Commerce & Management",
+    "telegram_chat_id": "@sppu_commerce_results",
+    "match_any_of": ["B.COM", "M.COM", "B.B.A", "M.B.A", "COMMERCE", "MANAGEMENT"]
+  },
+  {
+    "id": "arts_law",
+    "label": "Arts, Humanities & Law",
+    "telegram_chat_id": "@sppu_arts_results",
+    "match_any_of": ["B.A", "M.A", "LL.B", "LL.M", "ARTS", "LAW"]
+  },
+  {
+    "id": "pharmacy",
+    "label": "Pharmacy",
+    "telegram_chat_id": "@sppu_pharmacy_results",
+    "match_any_of": ["B.PHARM", "M.PHARM", "B.PHARMACY", "M.PHARMACY", "PHARMACY"]
+  }
+]

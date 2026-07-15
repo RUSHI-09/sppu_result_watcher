@@ -1,0 +1,19 @@
+{
+  "name": "sppu-result-watcher",
+  "version": "1.0.0",
+  "description": "Scrapes SPPU results dashboard and routes alerts to correct Telegram channels",
+  "main": "dist/watcher.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/watcher.js",
+    "dev": "tsx src/watcher.ts"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.1"
+  }
+}
