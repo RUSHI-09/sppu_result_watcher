@@ -62,3 +62,21 @@ To create and link Telegram channels to the bot:
 * **First Run**: Under your repo's **Actions** tab, find "Check SPPU Result" and click **Run workflow** to verify everything runs properly.
 * **Inactivity Pause**: GitHub automatically pauses schedules if the repository has no commits for 60 days. If it pauses, simply visit the repository's Actions tab and click "Enable workflows", or make a push/commit to re-enable it.
 * **Rotate Tokens**: If your Telegram token is leaked or needs to be changed, simply update the `TELEGRAM_BOT_TOKEN` secret in GitHub. No changes to the code are required.
+
+---
+
+### 5. Web Management Dashboard
+A built-in single-page web dashboard is available to manage categories, reset alerted lines, and trigger the scraper from your browser.
+
+#### How to use it:
+1. Open [index.html](file:///index.html) directly in any modern web browser.
+2. Enter your GitHub Repository path (e.g., `rushi76/sppu_result_watcher`).
+3. Enter a **GitHub Personal Access Token (PAT)**.
+   - **To generate a PAT**: Go to GitHub -> **Settings** -> **Developer Settings** -> **Personal Access Tokens (Tokens classic or Fine-grained)** -> **Generate New Token**.
+   - **Required Permissions**: `contents: write` (to update config/state JSON) and `actions: write` (to trigger manual scraper runs).
+4. Click **Connect & Load Platform**.
+5. The dashboard allows you to:
+   - **Trigger runs**: Click **Run Scraper Now** to immediately trigger a new results check and monitor recent runs.
+   - **Edit Categories**: Add, edit, or delete degree classifications and their matching keywords, then commit changes directly back to your repository.
+   - **Edit Ledger**: View the list of already-alerted results and clear specific lines if you want to re-enable alerts for those degree titles.
+

@@ -12,21 +12,9 @@
     "match_any_of": ["B.SC", "M.SC", "SCIENCE", "B.C.A", "M.C.A", "B.C.S", "M.C.S"]
   },
   {
-    "id": "commerce",
-    "label": "Commerce & Management",
-    "telegram_chat_id": "@sppu_commerce_results",
-    "match_any_of": ["B.COM", "M.COM", "B.B.A", "M.B.A", "COMMERCE", "MANAGEMENT"]
-  },
-  {
-    "id": "arts_law",
-    "label": "Arts, Humanities & Law",
-    "telegram_chat_id": "@sppu_arts_results",
-    "match_any_of": ["B.A", "M.A", "LL.B", "LL.M", "ARTS", "LAW"]
-  },
-  {
-    "id": "pharmacy",
-    "label": "Pharmacy",
-    "telegram_chat_id": "@sppu_pharmacy_results",
-    "match_any_of": ["B.PHARM", "M.PHARM", "B.PHARMACY", "M.PHARMACY", "PHARMACY"]
+    "id": "management",
+    "label": "Management",
+    "telegram_chat_id": "@sppu_management_results",
+    "match_any_of": ["B.B.A", "M.B.A", "MANAGEMENT"]
   }
 ]
