@@ -3,18 +3,36 @@
     "id": "engineering",
     "label": "Engineering",
     "telegram_chat_id": "@sppu_engineering_results",
-    "match_any_of": ["B.E", "B.TECH", "ENGINEERING", "M.E", "M.TECH"]
+    "match_any_of": [
+      "B.E.",
+      "B.TECH",
+      "ENGINEERING",
+      "M.E",
+      "M.TECH"
+    ]
   },
   {
     "id": "science",
     "label": "Science & Computer Applications",
     "telegram_chat_id": "@sppu_science_results",
-    "match_any_of": ["B.SC", "M.SC", "SCIENCE", "B.C.A", "M.C.A", "B.C.S", "M.C.S"]
+    "match_any_of": [
+      "B.SC",
+      "M.SC",
+      "SCIENCE",
+      "B.C.A",
+      "M.C.A",
+      "B.C.S",
+      "M.C.S"
+    ]
   },
   {
     "id": "management",
     "label": "Management",
     "telegram_chat_id": "@sppu_management_results",
-    "match_any_of": ["B.B.A", "M.B.A", "MANAGEMENT"]
+    "match_any_of": [
+      "B.B.A",
+      "M.B.A",
+      "MANAGEMENT"
+    ]
   }
 ]

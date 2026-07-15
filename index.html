@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPPU Result Watcher - Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
   <!-- Toasts/Notifications -->
@@ -26,23 +30,25 @@
   <main>
     <!-- Left Column: Settings and Controls -->
     <div class="column-left">
-      
+
       <!-- Connection Card -->
       <section class="card connection-card">
         <h2>🔌 Connect to GitHub</h2>
-        <p class="card-desc">Enter your credentials to manage the scraper via the GitHub API. The token is stored locally in your browser.</p>
-        
+        <p class="card-desc">Enter your credentials to manage the scraper via the GitHub API. The token is stored
+          locally in your browser.</p>
+
         <div class="form-group">
           <label for="repo-input">GitHub Repository</label>
-          <input type="text" id="repo-input" value="rushi76/sppu_result_watcher" placeholder="username/repo">
+          <input type="text" id="repo-input" value="RUSHI-09/sppu_result_watcher" placeholder="username/repo">
         </div>
-        
+
         <div class="form-group">
           <label for="token-input">GitHub Personal Access Token (PAT)</label>
           <input type="password" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxx">
-          <small class="help-text">Requires <code>contents: write</code> and <code>actions: write</code> permissions.</small>
+          <small class="help-text">Requires <code>contents: write</code> and <code>actions: write</code>
+            permissions.</small>
         </div>
-        
+
         <button id="connect-btn" class="btn primary">Connect & Load Platform</button>
       </section>
 
@@ -53,7 +59,7 @@
           <button id="trigger-workflow-btn" class="btn success" disabled>Run Scraper Now</button>
         </div>
         <p class="card-desc">Trigger a manual run or view the execution history of your GitHub Actions scheduler.</p>
-        
+
         <div class="run-history">
           <h3>Recent Run History</h3>
           <div class="loading-spinner-container" id="history-loading">
@@ -70,15 +76,16 @@
 
     <!-- Right Column: Editors (Configuration and State) -->
     <div class="column-right">
-      
+
       <!-- Category Configuration Card -->
       <section class="card config-card disabled-card" id="config-card">
         <div class="card-header-btn">
           <h2>📁 Faculty Categories</h2>
           <button id="save-config-btn" class="btn primary" disabled>Save & Commit Config</button>
         </div>
-        <p class="card-desc">Assign matching keywords to specific courses and direct them to their respective Telegram channels.</p>
-        
+        <p class="card-desc">Assign matching keywords to specific courses and direct them to their respective Telegram
+          channels.</p>
+
         <div class="categories-container" id="categories-container">
           <!-- Rendered dynamically -->
         </div>
@@ -92,8 +99,9 @@
           <h2>🔔 Alerted Results Ledger</h2>
           <button id="save-state-btn" class="btn primary" disabled>Save & Commit Ledger</button>
         </div>
-        <p class="card-desc">Shows SPPU results that have already triggered alerts. Clear individual items to allow re-alerting if necessary.</p>
-        
+        <p class="card-desc">Shows SPPU results that have already triggered alerts. Clear individual items to allow
+          re-alerting if necessary.</p>
+
         <div class="ledger-container" id="ledger-container">
           <!-- Rendered dynamically -->
         </div>
@@ -107,17 +115,17 @@
     <div class="modal">
       <h3 id="modal-title">Edit Category</h3>
       <input type="hidden" id="modal-category-index">
-      
+
       <div class="form-group">
         <label for="modal-category-id">Category ID (Alphanumeric only)</label>
         <input type="text" id="modal-category-id" placeholder="e.g. engineering">
       </div>
-      
+
       <div class="form-group">
         <label for="modal-category-label">Display Name / Faculty Label</label>
         <input type="text" id="modal-category-label" placeholder="e.g. Engineering Results">
       </div>
-      
+
       <div class="form-group">
         <label for="modal-category-chat">Telegram Chat ID / Channel Username</label>
         <input type="text" id="modal-category-chat" placeholder="e.g. @sppu_engineering_results">
@@ -137,4 +145,5 @@
 
   <script src="dashboard.js"></script>
 </body>
+
 </html>
