@@ -1,0 +1,46 @@
+name: Check SPPU Result
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch: {}       # lets you also trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-chromium
+
+      - name: Install dependencies
+        run: |
+          pip install playwright requests
+          playwright install --with-deps chromium
+
+      - name: Run watcher
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python cloud_watcher.py
+
+      - name: Commit state if changed
+        run: |
+          if [[ -n $(git status --porcelain state.json 2>/dev/null) ]]; then
+            git config user.name "result-watcher-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add state.json
+            git commit -m "Update alert state"
+            git push
+          fi
