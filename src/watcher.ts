@@ -168,10 +168,14 @@ async function main() {
           state.alerted_lines[category.id] = [];
         }
 
-        // Check if we've already alerted on this line for this category
-        const alreadyAlerted = state.alerted_lines[category.id].includes(rawLine);
+        const cleanLine = rawLine.replace(/\s+/g, ' ').trim();
+        // Check if we've already alerted on this line for this category using normalized matching
+        const alreadyAlerted = state.alerted_lines[category.id].some(
+          alertedLine => normalize(alertedLine) === normLine
+        );
+
         if (!alreadyAlerted) {
-          console.log(`[MATCH] Category: ${category.label} | Line: "${rawLine}"`);
+          console.log(`[MATCH] Category: ${category.label} | Line: "${cleanLine}"`);
           
           const timestamp = new Date().toLocaleString('en-IN', {
             timeZone: 'Asia/Kolkata',
@@ -181,13 +185,13 @@ async function main() {
 
           const message = `🔔 SPPU Result Declared!\n\n` +
                           `Faculty/Category: ${category.label}\n` +
-                          `Result: ${rawLine}\n` +
+                          `Result: ${cleanLine}\n` +
                           `Declared On: ${timestamp} (IST)\n\n` +
                           `Check result here:\n${DASHBOARD_URL}`;
 
           const success = await sendTelegram(category.telegram_chat_id, message);
           if (success) {
-            state.alerted_lines[category.id].push(rawLine);
+            state.alerted_lines[category.id].push(cleanLine);
             stateChanged = true;
           }
         }
