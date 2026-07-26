@@ -31,6 +31,10 @@ To add a new category or change matching keywords, edit [categories.json](file:/
 * **`label`**: The display name included in the Telegram message.
 * **`telegram_chat_id`**: The Telegram channel username (e.g., `@sppu_engineering_results`) or channel numeric ID.
 * **`match_any_of`**: List of keywords. If any of these appear in a result title on the page (case and punctuation ignored), it triggers an alert.
+* **`enabled`**: Set to `false` to keep a stream configured but paused.
+* **`alert_existing`**: Set to `false` for new streams so the first active run records currently listed old results without alerting them. Future new results will alert normally.
+
+The default configuration includes prepared streams for Engineering, Computer/IT/CS, Management, Pharmacy, Science, Commerce, Law, and Arts/Education. Only Engineering is enabled by default; create the Telegram channel for each new stream, update its `telegram_chat_id`, then enable it from the dashboard.
 
 ---
 

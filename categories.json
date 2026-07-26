@@ -7,6 +7,139 @@
       "F.E.",
       "S.E.",
       "T.E."
-    ]
+    ],
+    "enabled": true,
+    "alert_existing": true
+  },
+  {
+    "id": "computer_it",
+    "label": "Computer / IT / CS",
+    "telegram_chat_id": "@sppu_cs_it_results",
+    "match_any_of": [
+      "MCA",
+      "M.C.A.",
+      "MASTER OF COMPUTER APPLICATIONS",
+      "BCA",
+      "B.C.A.",
+      "BACHELOR OF COMPUTER APPLICATIONS",
+      "COMPUTER SCIENCE",
+      "COMPUTER APPLICATION",
+      "CYBER",
+      "DATA SCIENCE",
+      "INFORMATION TECHNOLOGY"
+    ],
+    "enabled": false,
+    "alert_existing": false
+  },
+  {
+    "id": "management",
+    "label": "Management",
+    "telegram_chat_id": "@sppu_management_results",
+    "match_any_of": [
+      "MBA",
+      "M.B.A.",
+      "BBA",
+      "B.B.A.",
+      "BACHELOR OF BUSINESS ADMINISTRATION",
+      "MASTER OF BUSINESS ADMINISTRATION",
+      "BUSINESS MANAGEMENT",
+      "FINTECH",
+      "DIGITAL MARKETING"
+    ],
+    "enabled": false,
+    "alert_existing": false
+  },
+  {
+    "id": "pharmacy",
+    "label": "Pharmacy",
+    "telegram_chat_id": "@sppu_pharmacy_results",
+    "match_any_of": [
+      "B.PHARM",
+      "B.PHARMACY",
+      "M.PHARM",
+      "PHARM.D",
+      "PHARMACY",
+      "PHARM"
+    ],
+    "enabled": false,
+    "alert_existing": false
+  },
+  {
+    "id": "science",
+    "label": "Science",
+    "telegram_chat_id": "@sppu_science_results",
+    "match_any_of": [
+      "B.SC",
+      "B.Sc",
+      "BACHELOR OF SCIENCE",
+      "M.SC",
+      "M.Sc",
+      "MATHEMATICS",
+      "MICROBIOLOGY",
+      "BIOTECHNOLOGY",
+      "ZOOLOGY",
+      "STATISTICS",
+      "ELECTRONICS",
+      "ENVIRONMENTAL SCIENCE",
+      "BIO-CHEMISTRY",
+      "BIOINFORMATICS"
+    ],
+    "enabled": false,
+    "alert_existing": false
+  },
+  {
+    "id": "commerce",
+    "label": "Commerce",
+    "telegram_chat_id": "@sppu_commerce_results",
+    "match_any_of": [
+      "B.COM",
+      "B.Com",
+      "BACHELOR OF COMMERCE",
+      "M.COM",
+      "M.Com",
+      "MCOM",
+      "MASTER OF COMMERCE",
+      "COMMERCE"
+    ],
+    "enabled": false,
+    "alert_existing": false
+  },
+  {
+    "id": "law",
+    "label": "Law",
+    "telegram_chat_id": "@sppu_law_results",
+    "match_any_of": [
+      "LLB",
+      "LL.B",
+      "B.A.LL.B",
+      "B.B.A.LL.B",
+      "LLM",
+      "L.L.M",
+      "CYBER LAWS",
+      "TAXATION LAW",
+      "INTELLECTUAL PROPERTY",
+      "DIPLOMA IN LAW"
+    ],
+    "enabled": false,
+    "alert_existing": false
+  },
+  {
+    "id": "arts_education",
+    "label": "Arts / Education",
+    "telegram_chat_id": "@sppu_arts_education_results",
+    "match_any_of": [
+      "BACHELOR OF ARTS",
+      "M.A.",
+      "MA",
+      "B.ED",
+      "BED",
+      "M.ED",
+      "MED",
+      "JOURNALISM",
+      "GEOGRAPHY",
+      "EDUCATION"
+    ],
+    "enabled": false,
+    "alert_existing": false
   }
 ]

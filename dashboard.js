@@ -3,7 +3,7 @@ let GITHUB_REPO = '';
 let GITHUB_TOKEN = '';
 let categoriesData = [];
 let categoriesSha = '';
-let stateData = { alerted_lines: {} };
+let stateData = { alerted_lines: {}, alerted_results: {}, seeded_categories: {} };
 let stateSha = '';
 
 // DOM Elements
@@ -34,6 +34,8 @@ const modalCategoryId = document.getElementById('modal-category-id');
 const modalCategoryLabel = document.getElementById('modal-category-label');
 const modalCategoryChat = document.getElementById('modal-category-chat');
 const modalCategoryKeywords = document.getElementById('modal-category-keywords');
+const modalCategoryEnabled = document.getElementById('modal-category-enabled');
+const modalCategoryAlertExisting = document.getElementById('modal-category-alert-existing');
 const modalCancelBtn = document.getElementById('modal-cancel-btn');
 const modalSaveBtn = document.getElementById('modal-save-btn');
 
@@ -87,6 +89,21 @@ function encodeBase64(str) {
 
 function decodeBase64(str) {
   return decodeURIComponent(escape(atob(str.replace(/\s/g, ''))));
+}
+
+function normalizeResultText(text) {
+  return String(text || '')
+    .toUpperCase()
+    .replace(/\./g, '')
+    .replace(/[^A-Z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function resultKeyFromLine(line) {
+  return normalizeResultText(line)
+    .replace(/^\d+\s+/, '')
+    .trim();
 }
 
 // Connect Handler
@@ -272,12 +289,16 @@ function renderCategories() {
   }
 
   categoriesData.forEach((cat, index) => {
+    const isEnabled = cat.enabled !== false;
     const row = document.createElement('div');
-    row.className = 'category-row';
+    row.className = `category-row ${isEnabled ? '' : 'category-disabled'}`;
     row.innerHTML = `
       <div class="category-title-bar">
         <span class="category-label">${cat.label}</span>
-        <span class="category-id-badge">${cat.id}</span>
+        <div class="category-badges">
+          <span class="category-status-badge ${isEnabled ? 'enabled' : 'disabled'}">${isEnabled ? 'Active' : 'Paused'}</span>
+          <span class="category-id-badge">${cat.id}</span>
+        </div>
       </div>
       <div class="category-chat">Telegram Chat ID: <code>${cat.telegram_chat_id}</code></div>
       <div class="category-keywords">
@@ -301,6 +322,8 @@ window.editCategory = function(index) {
   modalCategoryLabel.value = cat.label;
   modalCategoryChat.value = cat.telegram_chat_id;
   modalCategoryKeywords.value = cat.match_any_of.join(', ');
+  modalCategoryEnabled.checked = cat.enabled !== false;
+  modalCategoryAlertExisting.checked = cat.alert_existing !== false;
   
   categoryModal.classList.add('open');
 };
@@ -321,6 +344,8 @@ addCategoryBtn.addEventListener('click', () => {
   modalCategoryLabel.value = '';
   modalCategoryChat.value = '';
   modalCategoryKeywords.value = '';
+  modalCategoryEnabled.checked = true;
+  modalCategoryAlertExisting.checked = true;
   
   categoryModal.classList.add('open');
 });
@@ -338,6 +363,8 @@ modalSaveBtn.addEventListener('click', () => {
     .split(',')
     .map(kw => kw.trim())
     .filter(Boolean);
+  const enabled = modalCategoryEnabled.checked;
+  const alertExisting = modalCategoryAlertExisting.checked;
 
   if (!id || !label || !chat || keywords.length === 0) {
     alert('Please fill out all fields and provide at least one keyword.');
@@ -354,7 +381,9 @@ modalSaveBtn.addEventListener('click', () => {
     id,
     label,
     telegram_chat_id: chat,
-    match_any_of: keywords
+    match_any_of: keywords,
+    enabled,
+    alert_existing: alertExisting
   };
 
   if (index === -1) {
@@ -418,6 +447,12 @@ function renderLedger() {
   if (!stateData.alerted_lines) {
     stateData.alerted_lines = {};
   }
+  if (!stateData.alerted_results) {
+    stateData.alerted_results = {};
+  }
+  if (!stateData.seeded_categories) {
+    stateData.seeded_categories = {};
+  }
 
   // Build blocks for all categories currently defined
   if (categoriesData.length === 0) {
@@ -429,7 +464,10 @@ function renderLedger() {
     const block = document.createElement('div');
     block.className = 'ledger-category-block';
     
-    const alertedLines = stateData.alerted_lines[cat.id] || [];
+    const alertedRecords = stateData.alerted_results[cat.id] || [];
+    const alertedLines = alertedRecords.length > 0
+      ? alertedRecords.map(record => record.line)
+      : (stateData.alerted_lines[cat.id] || []);
     
     block.innerHTML = `
       <div class="ledger-category-title">
@@ -461,10 +499,24 @@ function renderLedger() {
 }
 
 window.clearLedgerItem = function(catId, index) {
-  if (stateData.alerted_lines[catId]) {
-    stateData.alerted_lines[catId].splice(index, 1);
-    renderLedger();
+  const records = stateData.alerted_results?.[catId] || [];
+  const lines = stateData.alerted_lines?.[catId] || [];
+  const line = records[index]?.line || lines[index];
+  const key = resultKeyFromLine(line);
+
+  if (records.length > 0) {
+    stateData.alerted_results[catId] = records.filter((record, recordIndex) => {
+      return recordIndex !== index && record.key !== key;
+    });
   }
+
+  if (lines.length > 0) {
+    stateData.alerted_lines[catId] = lines.filter((legacyLine, lineIndex) => {
+      return lineIndex !== index && resultKeyFromLine(legacyLine) !== key;
+    });
+  }
+
+  renderLedger();
 };
 
 saveStateBtn.addEventListener('click', async () => {

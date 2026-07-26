@@ -2,12 +2,8 @@
   "alerted_lines": {
     "engineering": [
       "19 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "25 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "20 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "32 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
       "3 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
       "4 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "36 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
       "1 First Year M.Sc. MICROBIOLOGY(2023 Pattern (NEP 2020)) Summer Session 2026 20- July- 2026",
       "2 Second Year M.Sc. MICROBIOLOGY(2023 Pattern (NEP 2020)) Summer Session 2026 20- July- 2026",
       "7 First Year M.Sc. MICROBIOLOGY(2019 Pattern) Summer Session 2026 17- July- 2026",
@@ -47,29 +43,270 @@
       "229 Second Year M.Sc. INORGANIC CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
       "230 Second Year M.Sc. ORGANIC CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
       "231 Second Year M.Sc. ANALYTICAL CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
-      "4 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "5 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "37 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "5 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "6 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "38 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "11 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "12 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "44 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "15 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "16 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "39 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "16 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "17 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "40 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "20 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "21 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
-      "45 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "46 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "52 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "54 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
-      "56 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
       "1 T.E.(2019 Credit Pattern) Summer Session 2026 26- July- 2026"
     ]
-  }
+  },
+  "alerted_results": {
+    "engineering": [
+      {
+        "key": "BE 2019 PAT SUMMER SESSION 2026 15 JULY 2026",
+        "line": "19 B.E.(2019 PAT.) SUMMER SESSION 2026 15- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "ME FIRST YEAR ME 2017 PATTERN SUMMER SESSION 2026 20 JULY 2026",
+        "line": "3 M.E. First Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "ME SECOND YEAR ME 2017 PATTERN SUMMER SESSION 2026 20 JULY 2026",
+        "line": "4 M.E. Second Year M.E.(2017 Pattern) Summer Session 2026 20- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC MICROBIOLOGY 2023 PATTERN NEP 2020 SUMMER SESSION 2026 20 JULY 2026",
+        "line": "1 First Year M.Sc. MICROBIOLOGY(2023 Pattern (NEP 2020)) Summer Session 2026 20- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC MICROBIOLOGY 2023 PATTERN NEP 2020 SUMMER SESSION 2026 20 JULY 2026",
+        "line": "2 Second Year M.Sc. MICROBIOLOGY(2023 Pattern (NEP 2020)) Summer Session 2026 20- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC MICROBIOLOGY 2019 PATTERN SUMMER SESSION 2026 17 JULY 2026",
+        "line": "7 First Year M.Sc. MICROBIOLOGY(2019 Pattern) Summer Session 2026 17- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC MICROBIOLOGY 2019 PATTERN N 2 1 WINTER SESSION 2025 17 JULY 2026",
+        "line": "8 First Year M.Sc. MICROBIOLOGY(2019 Pattern) N+2+1 Winter Session 2025 17- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC MICROBIOLOGY 2019 PATTERN SUMMER SESSION 2026 17 JULY 2026",
+        "line": "9 Second Year M.Sc. MICROBIOLOGY(2019 Pattern) Summer Session 2026 17- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC MICROBIOLOGY 2019 PATTERN N 2 1 WINTER SESSION 2025 17 JULY 2026",
+        "line": "10 Second Year M.Sc. MICROBIOLOGY(2019 Pattern) N+2+1 Winter Session 2025 17- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC ELECTRONICS 2025 PATTERN NEP 2020 SUMMER SESSION 2026 16 JULY 2026",
+        "line": "14 First Year M.Sc. ELECTRONICS ((2025 Pattern (NEP 2020))) Summer Session 2026 16- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC DRUG CHEMISTRY 2023 PATTERN NEP 2020 SUMMER SESSION 2026 16 JULY 2026",
+        "line": "15 First Year M.Sc. DRUG CHEMISTRY(2023 Pattern (NEP 2020)) Summer Session 2026 16- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC DRUG CHEMISTRY 2023 PATTERN NEP 2020 SUMMER SESSION 2026 16 JULY 2026",
+        "line": "16 Second Year M.Sc. DRUG CHEMISTRY(2023 Pattern (NEP 2020)) Summer Session 2026 16- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC IMCA 2025 PATTERN NEP 2020 SUMMER SESSION 2026 16 JULY 2026",
+        "line": "17 First Year M.Sc.(IMCA)((2025 Pattern (NEP 2020))) Summer Session 2026 16- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC INORGANIC CHEMISTRY 2019 PATTERN SUMMER SESSION 2026 13 JULY 2026",
+        "line": "44 First Year M.Sc. INORGANIC CHEMISTRY(2019 Pattern) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC INORGANIC CHEMISTRY 2019 PATTERN N 2 1 WINTER SESSION 2025 13 JULY 2026",
+        "line": "45 First Year M.Sc. INORGANIC CHEMISTRY(2019 Pattern) N+2+1 Winter Session 2025 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC INORGANIC CHEMISTRY 2019 PATTERN SUMMER SESSION 2026 13 JULY 2026",
+        "line": "46 Second Year M.Sc. INORGANIC CHEMISTRY(2019 Pattern) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC INORGANIC CHEMISTRY 2019 PATTERN N 2 1 WINTER SESSION 2025 13 JULY 2026",
+        "line": "47 Second Year M.Sc. INORGANIC CHEMISTRY(2019 Pattern) N+2+1 Winter Session 2025 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MA MSC STATISTICS 2023 PATTERN NEP 2020 SUMMER SESSION 2026 13 JULY 2026",
+        "line": "48 First Year M.A./M.Sc. STATISTICS(2023 PATTERN (NEP 2020)) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MA MSC STATISTICS 2023 PATTERN NEP 2020 SUMMER SESSION 2026 13 JULY 2026",
+        "line": "49 Second Year M.A./M.Sc. STATISTICS(2023 PATTERN (NEP 2020)) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC ELECTRONICS 2023 PATTERN NEP 2020 SUMMER SESSION 2026 13 JULY 2026",
+        "line": "50 First Year M.Sc. ELECTRONICS (2023 Pattern (NEP 2020)) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC ELECTRONICS 2023 PATTERN NEP 2020 SUMMER SESSION 2026 13 JULY 2026",
+        "line": "51 Second Year M.Sc. ELECTRONICS (2023 Pattern (NEP 2020)) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC ZOOLOGY 2023 PATTERN NEP 2020 SUMMER SESSION 2026 13 JULY 2026",
+        "line": "55 First Year M.Sc. ZOOLOGY(2023 PATTERN (NEP 2020)) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC ZOOLOGY 2023 PATTERN NEP 2020 SUMMER SESSION 2026 13 JULY 2026",
+        "line": "56 Second Year M.Sc. ZOOLOGY(2023 PATTERN (NEP 2020)) Summer Session 2026 13- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC BIOINFORMATICS WINTER SESSION 2025 PROGRAM 125 09 JULY 2026",
+        "line": "69 FIRST YEAR M.Sc. Bioinformatics Winter Session 2025-Program 125 09- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC DEFENCE STUDIES WINTER SESSION 2025 PROGRAM 125 09 JULY 2026",
+        "line": "70 FIRST YEAR MSc Defence Studies Winter Session 2025-Program 125 09- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC DIETETICS WINTER SESSION 2025 PROGRAM 125 27 JUNE 2026",
+        "line": "120 FIRST YEAR M.Sc.(Dietetics) Winter Session 2025-Program 125 27- June- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC HEALTH SCIENCES WINTER SESSION 2025 PROGRAM 125 27 JUNE 2026",
+        "line": "121 First Year M.Sc. Health Sciences Winter Session 2025-Program 125 27- June- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC WINE BREWING AND ALCOHOL TECHNOLOGY WINTER SESSION 2025 PROGRAM 125 27 JUNE 2026",
+        "line": "122 FIRST YEAR M.Sc.(Wine, Brewing and Alcohol Technology) Winter Session 2025-Program 125 27- June- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC INFORMATION TECHNOLOGY WINTER SESSION 2025 PROGRAM 125 27 JUNE 2026",
+        "line": "123 First Year M.Sc. (Information Technology) Winter Session 2025-Program 125 27- June- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC CYBER SECURITY WINTER SESSION 2025 PROGRAM 125 27 JUNE 2026",
+        "line": "124 First Year M.Sc. (Cyber Security) Winter Session 2025-Program 125 27- June- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "FIRST YEAR MSC FOOD SCIENCE AND NUTRITION WINTER SESSION 2025 PROGRAM 125 27 JUNE 2026",
+        "line": "126 FIRST YEAR M.Sc. (Food Science and Nutrition) Winter Session 2025-Program 125 27- June- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC ENVIRONMENTAL SCIENCE NON NEP TO NEP 2019 2023 PATTERN SUMMER SESSION 2025 18 MAY 2026",
+        "line": "207 Second Year M.Sc. ENVIRONMENTAL SCIENCE([(NON-NEP) to NEP 2019-2023 PATTERN)]) Summer Session 2025 18- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC COMPUTER APPLICATIONS NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "220 Second Year M.Sc. Computer Applications([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC COMPUTER SCIENCE NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "221 Second Year M.Sc. Computer Science([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC MATHEMATICS NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "223 Second Year M.Sc. MATHEMATICS([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC PHYSICS NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "224 Second Year M.Sc. PHYSICS([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC BOTANY NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "226 Second Year M.Sc. BOTANY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC ZOOLOGY NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "227 Second Year M.Sc. ZOOLOGY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC PHYSICAL CHEMISTRY NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "228 Second Year M.Sc. PHYSICAL CHEMISTRY ([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC INORGANIC CHEMISTRY NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "229 Second Year M.Sc. INORGANIC CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC ORGANIC CHEMISTRY NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "230 Second Year M.Sc. ORGANIC CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SECOND YEAR MSC ANALYTICAL CHEMISTRY NON NEP TO NEP 2019 2023 PATTERN WINTER SESSION 2025 12 MAY 2026",
+        "line": "231 Second Year M.Sc. ANALYTICAL CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "TE 2019 CREDIT PATTERN SUMMER SESSION 2026 26 JULY 2026",
+        "line": "1 T.E.(2019 Credit Pattern) Summer Session 2026 26- July- 2026",
+        "first_alerted_at": "2026-07-26T11:17:01.651Z",
+        "last_seen_at": "2026-07-26T11:17:01.651Z"
+      }
+    ]
+  },
+  "seeded_categories": {}
 }
