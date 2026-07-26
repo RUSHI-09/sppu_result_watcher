@@ -6,7 +6,8 @@
     "match_any_of": [
       "F.E.",
       "S.E.",
-      "T.E."
+      "T.E.",
+      "B.E."
     ],
     "enabled": true,
     "alert_existing": true
