@@ -43,7 +43,14 @@
       "229 Second Year M.Sc. INORGANIC CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
       "230 Second Year M.Sc. ORGANIC CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
       "231 Second Year M.Sc. ANALYTICAL CHEMISTRY([(NON-NEP) to NEP 2019-2023 PATTERN)]) Winter Session 2025 12- May- 2026",
-      "1 T.E.(2019 Credit Pattern) Summer Session 2026 26- July- 2026"
+      "1 T.E.(2019 Credit Pattern) Summer Session 2026 26- July- 2026",
+      "S.E.(2024 Pattern (NEP 2020)) Winter Session 2025 12- February- 2026",
+      "S.E.(2019 CREDIT PAT.) WINTER SESSION 2025 06- February- 2026",
+      "F.E.(2019 Credit Pattern) Winter Session-2025 12- January- 2026",
+      "S.E.(2015 CREDIT PAT.) APR-MAY 2025 25- August- 2025",
+      "F.E.(2015 CREDIT PAT.) APR-MAY 2025 06- August- 2025",
+      "T.E.(2015 CREDIT PAT.) APR-MAY 2025 18- July- 2025",
+      "B.E.(2015 CREDIT PAT.) APR-MAY 2025 10- July- 2025"
     ]
   },
   "alerted_results": {
@@ -305,6 +312,48 @@
         "line": "1 T.E.(2019 Credit Pattern) Summer Session 2026 26- July- 2026",
         "first_alerted_at": "2026-07-26T11:17:01.651Z",
         "last_seen_at": "2026-07-26T11:17:01.651Z"
+      },
+      {
+        "key": "SE 2024 PATTERN NEP 2020 WINTER SESSION 2025 12 FEBRUARY 2026",
+        "line": "S.E.(2024 Pattern (NEP 2020)) Winter Session 2025 12- February- 2026",
+        "first_alerted_at": "2026-07-26T21:21:10.658Z",
+        "last_seen_at": "2026-07-26T21:21:10.658Z"
+      },
+      {
+        "key": "SE 2019 CREDIT PAT WINTER SESSION 2025 06 FEBRUARY 2026",
+        "line": "S.E.(2019 CREDIT PAT.) WINTER SESSION 2025 06- February- 2026",
+        "first_alerted_at": "2026-07-26T21:21:11.198Z",
+        "last_seen_at": "2026-07-26T21:21:11.198Z"
+      },
+      {
+        "key": "FE 2019 CREDIT PATTERN WINTER SESSION 2025 12 JANUARY 2026",
+        "line": "F.E.(2019 Credit Pattern) Winter Session-2025 12- January- 2026",
+        "first_alerted_at": "2026-07-26T21:21:11.534Z",
+        "last_seen_at": "2026-07-26T21:21:11.534Z"
+      },
+      {
+        "key": "SE 2015 CREDIT PAT APR MAY 2025 25 AUGUST 2025",
+        "line": "S.E.(2015 CREDIT PAT.) APR-MAY 2025 25- August- 2025",
+        "first_alerted_at": "2026-07-26T21:21:11.856Z",
+        "last_seen_at": "2026-07-26T21:21:11.856Z"
+      },
+      {
+        "key": "FE 2015 CREDIT PAT APR MAY 2025 06 AUGUST 2025",
+        "line": "F.E.(2015 CREDIT PAT.) APR-MAY 2025 06- August- 2025",
+        "first_alerted_at": "2026-07-26T21:21:12.196Z",
+        "last_seen_at": "2026-07-26T21:21:12.196Z"
+      },
+      {
+        "key": "TE 2015 CREDIT PAT APR MAY 2025 18 JULY 2025",
+        "line": "T.E.(2015 CREDIT PAT.) APR-MAY 2025 18- July- 2025",
+        "first_alerted_at": "2026-07-26T21:21:15.694Z",
+        "last_seen_at": "2026-07-26T21:21:15.694Z"
+      },
+      {
+        "key": "BE 2015 CREDIT PAT APR MAY 2025 10 JULY 2025",
+        "line": "B.E.(2015 CREDIT PAT.) APR-MAY 2025 10- July- 2025",
+        "first_alerted_at": "2026-07-26T21:21:16.015Z",
+        "last_seen_at": "2026-07-26T21:21:16.015Z"
       }
     ]
   },
